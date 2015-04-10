@@ -410,6 +410,10 @@ New fetures in this stable release:
   #include <Adafruit_RGBLCDShield.h>
 #endif
 
+#if defined(FEATURE_LCD_MO)
+  #include <MatrixOrbitali2c.h>
+#endif
+
 #if defined(FEATURE_CALLSIGN_RECEIVE_PRACTICE)
   #include "BasicTerm.h"
 #endif
@@ -708,6 +712,10 @@ byte send_buffer_status = SERIAL_SEND_BUFFER_NORMAL;
 #if defined(FEATURE_LCD_YDv1)
   //LiquidCrystal_I2C lcd(0x38);
   LiquidCrystal_I2C lcd(0x27, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // for FEATURE_LCD_YDv1; set the LCD I2C address needed for LCM1602 IC V1
+#endif
+
+#if defined(FEATURE_LCD_MO)
+  MatrixOrbitali2c lcd(0x2E); // Change for different i2c addresses
 #endif
 
 #if defined(FEATURE_USB_KEYBOARD) || defined(FEATURE_USB_MOUSE)
