@@ -397,7 +397,7 @@ New fetures in this stable release:
   #include <LiquidCrystal.h>
 #endif
 
-#if defined(FEATURE_LCD_ADAFRUIT_I2C) || defined(FEATURE_LCD_YDv1)
+#if defined(FEATURE_LCD_ADAFRUIT_I2C) || defined(FEATURE_LCD_YDv1) || defined(FEATURE_LCD_MO)
   #include <Wire.h>
 #endif
 
